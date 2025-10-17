@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luxury Brand Feedback</title>
+</head>
+<body>
+  <h1>Welkom bij de feedback op luxe merkproducten</h1>
+  <h2>Geef je feedback</h2>
+  <label for="name">Naam:</label><br>
+  <input type="text" id="name" placeholder="Je naam" required><br>
+  <label for="age">Leeftijd:</label><br>
+  <input type="number" id="age" placeholder="Je leeftijd" required><br>
+  <label for="email">E-mail:</label><br>
+  <input type="email" id="email" placeholder="Je e-mail" required><br>
+  <label for="job">Beroep:</label><br>
+  <input type="text" id="job" placeholder="Je beroep" required><br>
+  <label for="designation">Functie:</label><br>
+  <input type="text" id="designation" placeholder="Je functie" required><br>
+  <label for="productType">Producttype:</label><br>
+  <select id="productType" required>
+    <option value="perfume">Parfum</option>
+    <option value="cream">Crème</option>
+    <option value="oils">Oliën</option>
+  </select><br>
+  <label for="feedbackText">Feedback:</label><br>
+  <textarea id="feedbackText" rows="5" cols="30" placeholder="Voer hier je feedback in" required></textarea><br>
+<button id="submitBtn">Verzend feedback</button>
+<hr>
+<div id="userInfo" style="display: none;">
+  <h2>Gebruikersinformatie:</h2>
+  <p>Naam: <span id="userName"></span></p>
+  <p>Leeftijd: <span id="userAge"></span></p>
+  <p>E-mail: <span id="userEmail"></span></p>
+  <p>Beroep: <span id="userJob"></span></p>
+  <p>Functie: <span id="userDesignation"></span></p>
+  <p>Feedback voor  <span id="userProductChoice"></span>: <span id="userFeedback"></span></p>
+</div>
+<script src="./product_survey.js"></script>
+</body>
+</html>
