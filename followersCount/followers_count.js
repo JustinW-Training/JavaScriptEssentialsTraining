@@ -17,3 +17,9 @@ function checkCountValue() {
     alert("Je Instagram-post heeft 20 volgers gewonnen! Ga zo door!");
   }
 }
+
+function resetCountValue() {
+    count = 0
+    document.getElementById('countDisplay').innerHTML=count;
+    alert("Het aantal volgers is gereset.");
+}
