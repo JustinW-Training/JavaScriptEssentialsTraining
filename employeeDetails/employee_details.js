@@ -27,7 +27,7 @@ function displayHREmployees() {
 function findEmployeeById(employeeId) {
       const foundEmployee = employees.find(employee => employee.id === employeeId);
       if (foundEmployee) {
-      document.getElementById('employeesDetails').innerHTML =`<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
+      document.getElementById('employeesDetails').innerHTML =`<p>${foundEmployee.id}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
       }
       else{
         document.getElementById('employeesDetails').innerHTML = 'geen werknemer gevonden met deze ID';
@@ -38,7 +38,7 @@ function findEmployeeById(employeeId) {
     console.log(employeeSpecialization);
       const foundSpeciality = employees.find(employee => employee.specialization === employeeSpecialization);
       if (foundSpeciality) {
-      document.getElementById('employeesDetails').innerHTML =`<p>${foundSpeciality.id}: ${foundSpeciality.name}: ${foundSpeciality.name} - ${foundSpeciality.department} - ${foundSpeciality.specialization}</p>`;
+      document.getElementById('employeesDetails').innerHTML =`<p>${foundSpeciality.id}: ${foundSpeciality.name} - ${foundSpeciality.department} - ${foundSpeciality.specialization}</p>`;
       }
       else{
         document.getElementById('employeesDetails').innerHTML = 'geen werknemer gevonden met deze ID';
