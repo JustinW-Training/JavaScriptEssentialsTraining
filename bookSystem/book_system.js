@@ -26,7 +26,8 @@ function showbooks() {
         <p><strong>Auteur Naam:</strong> ${book.authorName}</p>
         <p><strong>Boek Beschrijving:</strong> ${book.bookDescription}</p>
         <p><strong>Aantal Pagina's:</strong> ${book.pagesNumber} pagina's</p>
-        <button onclick="editbook(${index})">Bewerken</button>`
+        <button onclick="editbook(${index})">Bewerken</button>
+        <button onclick="deleteBook(${index})">Verwijderen</button>`
     );
     document.getElementById('books').innerHTML = booksDiv.join('');
 }
@@ -46,4 +47,9 @@ function editbook(index) {
             document.getElementById('authorName').value = '';
             document.getElementById('bookDescription').value = '';
             document.getElementById('pagesNumber').value = '';
+ }
+
+ function deleteBook(index) {
+    books.splice(index, 1);
+    showbooks();
  }
