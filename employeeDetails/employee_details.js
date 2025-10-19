@@ -1,7 +1,7 @@
 const employees = [
-      { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000 },
-      { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000 },
-      { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000 },
+      { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000, specialization: 'Javascript' },
+      { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000, specialization: 'Python' },
+      { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000, specialization: 'Java' },
       //... Meer werknemersrecords kunnen hier worden toegevoegd
     ];
 
@@ -28,6 +28,17 @@ function findEmployeeById(employeeId) {
       const foundEmployee = employees.find(employee => employee.id === employeeId);
       if (foundEmployee) {
       document.getElementById('employeesDetails').innerHTML =`<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
+      }
+      else{
+        document.getElementById('employeesDetails').innerHTML = 'geen werknemer gevonden met deze ID';
+       }
+   }
+
+   function findEmployeeBySpeciality(employeeSpecialization) {
+    console.log(employeeSpecialization);
+      const foundSpeciality = employees.find(employee => employee.specialization === employeeSpecialization);
+      if (foundSpeciality) {
+      document.getElementById('employeesDetails').innerHTML =`<p>${foundSpeciality.id}: ${foundSpeciality.name}: ${foundSpeciality.name} - ${foundSpeciality.department} - ${foundSpeciality.specialization}</p>`;
       }
       else{
         document.getElementById('employeesDetails').innerHTML = 'geen werknemer gevonden met deze ID';
