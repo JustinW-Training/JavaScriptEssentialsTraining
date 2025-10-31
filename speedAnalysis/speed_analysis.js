@@ -31,6 +31,7 @@ startTime = new Date().getTime();
             var typedWords = userTypedText.split(/\s+/).filter(function (word) {
                 return word !== "";
             }).length;
+            var totalLength = userTypedText.length;
 
             var wpm = 0; // Standaardwaarde
 
@@ -41,7 +42,8 @@ startTime = new Date().getTime();
             // Toon de resultaten
             var outputDiv = document.getElementById("output");
             outputDiv.innerHTML = "<h2>Resultaten van de Typetest:</h2>" +
-                "<p>Getypte Woorden: " + typedWords + "</p>" +
+            "<p>Totale Lengte: " + totalLength + "</p>" +    
+            "<p>Getypte Woorden: " + typedWords + "</p>" +
                 "<p>Verstreken Tijd: " + timeElapsed.toFixed(2) + " seconden</p>" +
                 "<p>Woorden Per Minuut (WPM): " + wpm + "</p>";
             }
