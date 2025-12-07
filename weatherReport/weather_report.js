@@ -2,7 +2,7 @@ function showweatherDetails(event) {
   event.preventDefault();
 
   const city = document.getElementById('city').value;
-  const apiKey = 'a2fa31ccf3e6388cbfb6c0909f1d0e7d';
+  const apiKey = 'YOUR_KEY';
 
   // Gebruik city, NIET lat/lon
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -29,7 +29,7 @@ function showweatherDetails2(event) {
 
   const lat = document.getElementById('lat').value;
   const lon = document.getElementById('lon').value;
-  const apiKey = 'a2fa31ccf3e6388cbfb6c0909f1d0e7d';
+  const apiKey = 'YOUR_KEY';
 
   // Gebruik lat/lon, NIET city
   const apiUrl2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
